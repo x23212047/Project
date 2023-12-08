@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Stat Tracker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <a class="navbar-brand" href="addgame.html">Add Game</a>
+            <a class="navbar-brand" href="viewstats.html" id="viewStatsLink">View Stats</a>
+            <a class="navbar-brand" href="playerstats.html" id="viewPlayerStatsLink">Player Stats</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Welcome to the Game Stat Tracker!</h1>
+        <!-- About Section -->
+        <div id="about">
+            <h2>About</h2>
+            <p>This is a game stat tracker that allows you to add and view game statistics.</p>
+            <p>Here you can enter the games you are playing or have played</p>
+            <p>You can monitor game time, genre preference and more</p>
+            <p>We will continue to add to stats, please let us know what more you want added</p>
+            <br>
+            <br>
+            <p>Play the Rock, Paper, Scissors game and keep track of your wins! While we continue to work on the site</p>
+        </div>
+
+        <!-- Form to add a game -->
+        <form id="addGameForm">
+            <label for="gameName" class="form-label">Game Name:</label>
+            <input type="text" id="gameName" name="gameName" class="form-control" required>
+            <br>
+            <label for="gameDuration" class="form-label">Game Duration (in minutes):</label>
+            <input type="number" id="gameDuration" name="gameDuration" class="form-control" required>
+            <br>
+            <input type="submit" value="Add Game" class="btn btn-primary">
+        </form>
+
+        <!-- Centered Rock, Paper, Scissors game -->
+        <div class="centered">
+            <h1>Rock, Paper, Scissors Game</h1>
+            <div class="options">
+                <button class="btn btn-primary" onclick="playGame('rock')">Rock</button>
+                <button class="btn btn-primary" onclick="playGame('paper')">Paper</button>
+                <button class="btn btn-primary" onclick="playGame('scissors')">Scissors</button>
+            </div>
+            <p id="result"></p>
+        </div>
+
+        <!-- Display game statistics -->
+        <div id="statsList"></div>
+    </main>
+
+    <!-- Include Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

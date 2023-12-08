@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Game</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Home</a>
+            <a class="navbar-brand" href="addgame.html">Add Game</a>
+            <a class="navbar-brand" href="viewstats.html">View Stats</a>
+            <a class="navbar-brand" href="playerstats.html" id="viewPlayerStatsLink">Player Stats</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <h1>Add a Game</h1>
+        <!-- Form to add a game -->
+        <form id="addGameForm">
+            <div class="mb-3">
+                <label for="gameName" class="form-label">Game Name:</label>
+                <input type="text" id="gameName" name="gameName" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="gameDuration" class="form-label">Game Duration (in minutes):</label>
+                <input type="number" id="gameDuration" name="gameDuration" class="form-control" required>
+            </div>
+            <!-- Additional form fields -->
+            <div class="mb-3">
+                <label for="gameGenre" class="form-label">Game Genre:</label>
+                <input type="text" id="gameGenre" name="gameGenre" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="releaseYear" class="form-label">Release Year:</label>
+                <input type="number" id="releaseYear" name="releaseYear" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="platform" class="form-label">Platform:</label>
+                <select id="platform" name="platform" class="form-select">
+                    <option value="PC">PC</option>
+                    <option value="Console">Console</option>
+                    <option value="Mobile">Mobile</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Game</button>
+        </form>
+    </main>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
